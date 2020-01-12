@@ -1,2 +1,3 @@
 # TxtFileOrganiser
-Used to organise a txt file
+Initially used to organise a txt file containing musical artists
+Sorts alphabetically and removes duplicates
