@@ -1,0 +1,14 @@
+# Song sorter
+# Sorts 'songs.txt' alphabetically and caps first letter of each word
+f = open('songs.txt') #open file
+lines = f.readlines() #read each line into lists
+lines = [x for x in lines if x != '\n'] #remove gaps
+for i in range (0, len(lines)): #for each line
+ lines[i] = lines[i].title() #capitalize first letter of each word
+lines = list(dict.fromkeys(lines)) #remove duplicates
+lines.sort() #sort alphabetically
+open('songs.txt', "w").close() #wipe file
+for x in range(0, len(lines)): #rewrite file using sorted list
+ with open('songs.txt', 'a') as myfile:
+  myfile.write(lines[x])
+print("sorted") #task completion message
